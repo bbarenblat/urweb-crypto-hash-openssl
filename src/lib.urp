@@ -1,0 +1,5 @@
+ffi hashFFI
+include hashFFI.h
+link -lurweb_crypto_hash_openssl -lcrypto
+
+hash
