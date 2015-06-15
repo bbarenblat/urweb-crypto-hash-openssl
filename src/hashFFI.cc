@@ -87,3 +87,23 @@ uw_Basis_string uw_HashFFI_sha1(uw_context* const context,
                                const uw_Basis_blob input) {
   return Hash<SHA_DIGEST_LENGTH>(context, input, SHA1);
 }
+
+uw_Basis_string uw_HashFFI_sha224(uw_context* const context,
+                                  const uw_Basis_blob input) {
+  return Hash<SHA224_DIGEST_LENGTH>(context, input, SHA224);
+}
+
+uw_Basis_string uw_HashFFI_sha256(uw_context* const context,
+                                  const uw_Basis_blob input) {
+  return Hash<SHA256_DIGEST_LENGTH>(context, input, SHA256);
+}
+
+uw_Basis_string uw_HashFFI_sha384(uw_context* const context,
+                                  const uw_Basis_blob input) {
+  return Hash<SHA384_DIGEST_LENGTH>(context, input, SHA384);
+}
+
+uw_Basis_string uw_HashFFI_sha512(uw_context* const context,
+                                  const uw_Basis_blob input) {
+  return Hash<SHA512_DIGEST_LENGTH>(context, input, SHA512);
+}

@@ -21,3 +21,8 @@ val sql_maxable_digest : sql_maxable digest
 val md5 : blob -> digest
 
 val sha1 : blob -> digest
+
+val sha224 : blob -> digest
+val sha256 : blob -> digest
+val sha384 : blob -> digest
+val sha512 : blob -> digest

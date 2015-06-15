@@ -14,3 +14,8 @@ specific language governing permissions and limitations under the License. *)
 val md5 : blob -> string
 
 val sha1 : blob -> string
+
+val sha224 : blob -> string
+val sha256 : blob -> string
+val sha384 : blob -> string
+val sha512 : blob -> string

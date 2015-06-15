@@ -16,3 +16,8 @@ type digest = string
 val md5 = HashFFI.md5
 
 val sha1 = HashFFI.sha1
+
+val sha224 = HashFFI.sha224
+val sha256 = HashFFI.sha256
+val sha384 = HashFFI.sha384
+val sha512 = HashFFI.sha512

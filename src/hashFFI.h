@@ -22,7 +22,13 @@ extern "C" {
 #include <urweb/urweb_cpp.h>
 
 uw_Basis_string uw_HashFFI_md5(struct uw_context*, const uw_Basis_blob);
+
 uw_Basis_string uw_HashFFI_sha1(struct uw_context*, const uw_Basis_blob);
+
+uw_Basis_string uw_HashFFI_sha224(struct uw_context*, const uw_Basis_blob);
+uw_Basis_string uw_HashFFI_sha256(struct uw_context*, const uw_Basis_blob);
+uw_Basis_string uw_HashFFI_sha384(struct uw_context*, const uw_Basis_blob);
+uw_Basis_string uw_HashFFI_sha512(struct uw_context*, const uw_Basis_blob);
 
 #ifdef __cplusplus
 }
