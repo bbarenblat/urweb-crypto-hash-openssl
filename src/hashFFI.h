@@ -22,6 +22,7 @@ extern "C" {
 #include <urweb/urweb_cpp.h>
 
 uw_Basis_string uw_HashFFI_md5(struct uw_context*, const uw_Basis_blob);
+uw_Basis_string uw_HashFFI_sha1(struct uw_context*, const uw_Basis_blob);
 
 #ifdef __cplusplus
 }

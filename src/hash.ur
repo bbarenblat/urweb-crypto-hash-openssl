@@ -14,3 +14,5 @@ specific language governing permissions and limitations under the License. *)
 type digest = string
 
 val md5 = HashFFI.md5
+
+val sha1 = HashFFI.sha1

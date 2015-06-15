@@ -19,3 +19,5 @@ val sql_digest : sql_injectable digest
 val sql_maxable_digest : sql_maxable digest
 
 val md5 : blob -> digest
+
+val sha1 : blob -> digest
