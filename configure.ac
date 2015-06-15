@@ -12,7 +12,7 @@
 # License for the specific language governing permissions and limitations under
 # the License.
 
-AC_INIT([urweb-crypto-hash-openss], [0.0.0], [bbaren@mit.edu])
+AC_INIT([urweb-crypto-hash-openssl], [0.0.0], [bbaren@mit.edu])
 AM_INIT_AUTOMAKE([no-dist-gzip dist-xz foreign subdir-objects])
 LT_INIT
 
