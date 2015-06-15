@@ -48,3 +48,7 @@ liburweb_crypto_hash_openssl_la_LIBADD = -lurweb
 liburweb_crypto_hash_openssl_la_LDFLAGS = -export-symbols-regex '^uw_HashFFI_'
 
 liburweb_crypto_hash_openssl_ladir = $(datadir)/urweb/ur/crypto-hash-openssl
+
+EXTRA_DIST = \
+	LICENSE \
+	$(liburweb_crypto_hash_openssl_la_DATA)
