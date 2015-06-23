@@ -16,14 +16,16 @@ ACLOCAL_AMFLAGS = -I m4
 
 CPPFLAGS = \
 	-Wall \
-	-D_FORTIFY_SOURCE=2
+	-D_FORTIFY_SOURCE=2 \
+	@OpenSSL_CFLAGS@
 
 CXXFLAGS = \
 	-std=c++11 \
 	-ftrapv \
 	-fstack-protector-strong --param=ssp-buffer-size=4 \
 	-fPIE \
-	-O2
+	-O2 \
+	@OpenSSL_CFLAGS@
 
 CXXFLAGS += \
 	-Weverything \
@@ -44,7 +46,7 @@ liburweb_crypto_hash_openssl_la_DATA = \
 	src/hash.ur \
 	src/hashFFI.urs
 
-liburweb_crypto_hash_openssl_la_LIBADD = -lurweb
+liburweb_crypto_hash_openssl_la_LIBADD = @OpenSSL_LIBS@ -lurweb
 liburweb_crypto_hash_openssl_la_LDFLAGS = -export-symbols-regex '^uw_HashFFI_'
 
 liburweb_crypto_hash_openssl_ladir = $(datadir)/urweb/ur/crypto-hash-openssl

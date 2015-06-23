@@ -21,4 +21,26 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_PROG_CXX([clang++])
 AX_CXX_COMPILE_STDCXX_11([noext], [mandatory])
 
+AC_CHECK_HEADERS([openssl/md5.h openssl/sha.h],
+  [],
+  [AC_MSG_FAILURE([OpenSSL headers are required])])
+PKG_CHECK_MODULES([OpenSSL], [openssl])
+
+AC_CHECK_HEADERS([urweb/urweb_cpp.h],
+  [],
+  [AC_MSG_FAILURE([Ur/Web headers are required])])
+save_LIBS=$LIBS
+LIBS="$LIBS -lurweb"
+AC_LINK_IFELSE([AC_LANG_CALL(
+                  [int uw_init_client_data;
+                   int uw_copy_client_data;
+                   int uw_global_custom;
+                   int uw_do_expunge;
+                   int uw_post_expunge;
+                   int uw_free_client_data;],
+                  [uw_error])],
+  [],
+  [AC_MSG_FAILURE([could not link with -lurweb])])
+LIBS=$save_LIBS
+
 AC_OUTPUT([Makefile])
